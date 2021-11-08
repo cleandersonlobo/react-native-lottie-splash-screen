@@ -6,11 +6,10 @@ import com.facebook.react.bridge.ReactMethod;
 
 /**
  * SplashScreen
- * 启动屏
- * from：http://www.devio.org
- * Author:CrazyCodeBoy
- * GitHub:https://github.com/crazycodeboy
- * Email:crazycodeboy@gmail.com
+ * from：https:/qgx.digital
+ * Author:qgxpagamentos
+ * GitHub:https://github.com/qgxpagamentos
+ * Email:admin@qgxpagamentos.com.br
  */
 public class SplashScreenModule extends ReactContextBaseJavaModule {
   public SplashScreenModule(ReactApplicationContext reactContext) {

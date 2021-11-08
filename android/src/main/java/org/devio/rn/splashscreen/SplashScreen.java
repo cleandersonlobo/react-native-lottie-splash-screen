@@ -9,11 +9,10 @@ import java.lang.ref.WeakReference;
 
 /**
  * SplashScreen
- * 启动屏
- * from：http://www.devio.org
- * Author:CrazyCodeBoy
- * GitHub:https://github.com/crazycodeboy
- * Email:crazycodeboy@gmail.com
+ * from：https:/qgx.digital
+ * Author:qgxpagamentos
+ * GitHub:https://github.com/qgxpagamentos
+ * Email:admin@qgxpagamentos.com.br
  */
 public class SplashScreen {
   private static Dialog mSplashDialog;
@@ -21,9 +20,6 @@ public class SplashScreen {
   private static Boolean isAnimationFinished = false;
   private static Boolean waiting = false;
 
-  /**
-   * 打开启动屏
-   */
   public static void show(final Activity activity, final int themeResId, final int lottieId) {
     if (activity == null)
       return;
@@ -35,25 +31,26 @@ public class SplashScreen {
           mSplashDialog = new Dialog(activity, themeResId);
           mSplashDialog.setContentView(R.layout.launch_screen);
 
-          LottieAnimationView lottie = (LottieAnimationView) mSplashDialog.findViewById(lottieId);
+          if (lottieId != 0) {
+            LottieAnimationView lottie = (LottieAnimationView) mSplashDialog.findViewById(lottieId);
+            lottie.addAnimatorListener(new Animator.AnimatorListener() {
+              @Override
+              public void onAnimationStart(Animator animation) {
+                System.out.println("asdf");
+              }
 
-          lottie.addAnimatorListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
-              System.out.println("asdf");
-            }
+              @Override
+              public void onAnimationEnd(Animator animation) {
+                SplashScreen.setAnimationFinished(true);
+              }
 
-            @Override
-            public void onAnimationEnd(Animator animation) {
-              SplashScreen.setAnimationFinished(true);
-            }
+              @Override
+              public void onAnimationCancel(Animator animation) {}
 
-            @Override
-            public void onAnimationCancel(Animator animation) {}
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {}
-          });
+              @Override
+              public void onAnimationRepeat(Animator animation) {}
+            });
+          }
 
           if (!mSplashDialog.isShowing()) {
             mSplashDialog.show();
@@ -61,6 +58,12 @@ public class SplashScreen {
         }
       }
     });
+  }
+
+  public static void show(final Activity activity, final boolean fullScreen) {
+    int resourceId = fullScreen ? R.style.SplashScreen_Fullscreen : R.style.SplashScreen_SplashTheme;
+
+    show(activity, resourceId, 0);
   }
 
   public static void setAnimationFinished(boolean flag) {
@@ -96,9 +99,6 @@ public class SplashScreen {
     show(activity, resourceId, lottieId);
   }
 
-  /**
-   * 关闭启动屏
-   */
   public static void hide(Activity activity) {
     if (activity == null) {
       if (mActivity == null) {

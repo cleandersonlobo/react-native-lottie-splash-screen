@@ -1,11 +1,9 @@
 /**
  * SplashScreen
- * 启动屏
- * from：http://www.devio.org
- * Author:CrazyCodeBoy
- * GitHub:https://github.com/crazycodeboy
- * Email:crazycodeboy@gmail.com
- * @flow
+ * from：https:/qgx.digital
+ * Author:qgxpagamentos
+ * GitHub:https://github.com/qgxpagamentos
+ * Email:admin@qgxpagamentos.com.br
  */
 'use strict';
 
@@ -37,16 +35,16 @@ export default class example extends Component {
             >
                 <View >
                     <Text style={styles.item}>
-                        SplashScreen 启动屏
+                        SplashScreen
                     </Text>
                     <Text style={styles.item}>
                         @：http://www.devio.org/
                     </Text>
                     <Text style={styles.item}>
-                        GitHub:https://github.com/crazycodeboy
+                        GitHub:https://github.com/qgxpagamentos
                     </Text>
                     <Text style={styles.item}>
-                        Email:crazycodeboy@gmail.com
+                        Email:admin@qgxpagamentos.com.br
                     </Text>
                 </View>
             </TouchableOpacity>

@@ -1,5 +1,5 @@
 //  Dynamic.swift
-//  Created by Taehyun Hwang on 2020/10/29.
+//  Created by QGX Pagamentos on 2021/11/08
 
 import UIKit
 import Foundation
