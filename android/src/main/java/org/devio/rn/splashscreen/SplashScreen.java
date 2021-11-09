@@ -61,10 +61,10 @@ public class SplashScreen {
     });
   }
 
-  public static void show(final Activity activity, final boolean fullScreen) {
-    int resourceId = fullScreen ? R.style.SplashScreen_Fullscreen : R.style.SplashScreen_SplashTheme;
+  public static void show(final Activity activity, final boolean flag) {
+    int resourceId = flag ? R.style.SplashScreen_Fullscreen : R.style.SplashScreen_SplashTheme;
 
-    this.fullScreen = fullScreen;
+    fullScreen = flag;
     show(activity, resourceId, 0);
   }
 
