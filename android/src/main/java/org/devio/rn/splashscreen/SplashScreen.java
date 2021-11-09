@@ -19,6 +19,7 @@ public class SplashScreen {
   private static WeakReference<Activity> mActivity;
   private static Boolean isAnimationFinished = false;
   private static Boolean waiting = false;
+  private static Boolean fullScreen = false;
 
   public static void show(final Activity activity, final int themeResId, final int lottieId) {
     if (activity == null)
@@ -63,6 +64,7 @@ public class SplashScreen {
   public static void show(final Activity activity, final boolean fullScreen) {
     int resourceId = fullScreen ? R.style.SplashScreen_Fullscreen : R.style.SplashScreen_SplashTheme;
 
+    this.fullScreen = fullScreen;
     show(activity, resourceId, 0);
   }
 
@@ -111,6 +113,11 @@ public class SplashScreen {
       return;
 
     waiting = true;
+
+    if (fullScreen) {
+      waiting = false
+      isAnimationFinished = true;
+    }
 
     final Activity _activity = activity;
 
