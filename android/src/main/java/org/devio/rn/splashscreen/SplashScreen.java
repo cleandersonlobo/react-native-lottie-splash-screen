@@ -115,7 +115,7 @@ public class SplashScreen {
     waiting = true;
 
     if (fullScreen) {
-      waiting = false
+      waiting = false;
       isAnimationFinished = true;
     }
 
