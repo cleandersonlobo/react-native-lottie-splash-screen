@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pyarmak/react-native-lottie-splash-screen.git"
+    "url": "git+https://github.com/cleandersonlobo/react-native-lottie-splash-screen.git"
   },
   "keywords": [
     "react-native",
@@ -34,10 +34,10 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pyarmak/react-native-lottie-splash-screen/issues"
+    "url": "https://github.com/cleandersonlobo/react-native-lottie-splash-screen/issues"
   },
   "peerDependencies": {
-    "react-native": ">=0.66.0"
+    "react-native": ">=0.63.0"
   },
-  "homepage": "https://github.com/pyarmak/react-native-lottie-splash-screen#readme"
+  "homepage": "https://github.com/cleandersonlobo/react-native-lottie-splash-screen#readme"
 }
